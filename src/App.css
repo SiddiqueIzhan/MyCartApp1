@@ -1,38 +1,345 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+.App{
+    width: 100%;
+    height: 120vh;
+    background-color: antiquewhite;
+}
+.Container{
+    width: 75%;
+    height: 90vh;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.Content{
+    width: 55%;
+    height: 100%;
+}
+.text1{
+    width: 100%;
+    height: 20px;
+    text-align: left;
+    margin: 20px 0px;
+}
+.Bar{
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px 0px;
+    box-shadow: 1px 1px 2px gray;
+}
+.text2{
+    width: 200px;
+    height: 50px;
+    text-align: left;
+}
+#num{
+    width: 20px;
+    height: 30px;
+    border: 0px;
+    font-size: 15px;
+    text-align: center;
+}
+#num:hover{
+    border: none
+}
+#delete{
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    background-color: white;
+    font-size: 25px;
+}
+#delete:hover{
+    color: tomato;
+}
+.Bar:hover{
+    border: 2px solid rgb(0, 136, 255);
+}
+.Form{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(132, 0, 255);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.inp{
+    margin: 10px 0px;
+}
+.Form input{
+    width: 100%;
+    height: 30px;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: white;
+    opacity: 0.4;
+    padding: 10px;
+}
+input::placeholder{
+    color: black;
+}
+.inpc{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inpc2{
+    width: 100%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px 5px;
+    margin: auto;
+    font-size: 16px;
+    padding: 0px 5px;
+}
+.Form .inpc .inp{
+    width: 48%
+}
+.Form label{
+    font-size: 15px;
+}
+#subbutton{
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    background-color: rgb(27, 202, 27);
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0px;
+    font-size: 20px;
+}
+.headt{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.cards{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cards button{
+    width: 70px;
+    height: 45px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.7;
+}
+#arr{
+    background-color:  rgb(27, 202, 27);
+}
+#ht1{
+    margin-bottom: 20px;
+}
+.IncDec{
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#calc{
+    font-size: 12px;
+}
+#lf{
+    text-align: left;
+}
+#rt{
+    text-align: right;
+}
+.delAll{
+    width: 125px;
+    height: 50px;
+    padding: 5px 10px;
+    background-color: tomato;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 40px;
+    font-size: 20px;
+}
+.message{
+    width: 90%;
+    height: 200px;
+    margin: 80px 15px;
+    font-size: 30px;
+    text-align: center;
+}
+#imm #cc{
+    margin-right: 20px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 1250px){
+    .Container{
+        width: 925px;
+    }
+    #imm{
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 925px){
+    .App{
+        background-color: white;
+    }
+    .Container{
+        width: 100%;
+    }
+    #cc{
+        width: 60px;
+    }
+    .IncDec{
+        display: block;
+        height: 80px;
+        width: 40px;
+    }
+    .Ic{
+        width: 100%;
+        height: 25%;
+        padding-left: 4px;
+        font-size: 15px;    
+    }
+}
+@media screen and (max-width: 850px){
+    .Content p{
+        font-size: 15px;
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width: 800px){
+    .Container{
+        padding: 40px 20px;
+    }
+    .Bar{
+        padding: 10px;
+    }
 }
+@media screen and (max-width: 760px){
+    .App{
+        height: 175vh;
+    }
+    .Container{
+        display: block;
+        position: absolute;
+        top: 0px;
+    }
+    .Content{
+        margin: auto;
+        width: 70%;
+    }
+    .Form{
+        margin: auto;
+        width: 60%;
+        position: relative;
+        top: 40px;
+    }
+    #cc{
+        width: 70px;
+    }
+}
+@media screen and (max-width: 590px){
+    .Form{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 520px){
+    .Content .Form{
+        width: 100%;
+    }
+    h4{
+        font-size: 14px;
+    }
+    .Content p{
+        font-size: 12px;
+    }
+    .IncDec #rate #delete{
+        margin: auto;
+    }
+    .IncDec{
+        position: relative;
+        top: 5px;
+    }
+    .Bar{
+        height: 85px;
+    }
+    #delete{
+        font-size: 12px
+    }
+    #cc{
+        width: 60px;
+    }
+    #num{
+        font-size: 13px;
+        height: 15px;
+    }
+}
+@media screen and (max-width: 470px){
+    .Container{
+        padding: 40px 10px;
+    }
+    .Form{
+        width: 80%;
+    }
+    .Bar{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px){
+    .Form{
+        width: 90%;
+    }
+    .Bar{
+        height: 75px;
+    }
+    .Bar h4{
+        font-size: 13px;
+    }
+    .Bar p{
+        font-size: 11px;
+    }
+    #delete{
+        font-size: 10px;
+    }
+    .Ic{
+        font-size: 15px;
+    }
+    .delAll{
+        width: 95px;
+        height: 40px;
+        font-size: 15px;
+        padding: 12px;
+        text-align: center;
+    }
+} 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
